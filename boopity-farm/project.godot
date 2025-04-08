@@ -22,6 +22,10 @@ InventoryManager="*res://Scripts/Global/inventory_manager.gd"
 DayAndNightCycleManager="*res://Scripts/Global/day_and_night_cycle_manager.gd"
 SaveGameManager="*res://Scripts/Global/save_game_manager.gd"
 
+[debug]
+
+gdscript/warnings/unused_parameter=0
+
 [display]
 
 window/size/viewport_width=640
