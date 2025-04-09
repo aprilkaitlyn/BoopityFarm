@@ -6,6 +6,7 @@ extends PanelContainer
 @onready var egg_label: Label = $MarginContainer/VBoxContainer/Egg/EggLabel
 @onready var milk_label: Label = $MarginContainer/VBoxContainer/Milk/MilkLabel
 
+
 func _ready() -> void:
 	InventoryManager.inventory_changed.connect(on_inventory_changed)
 	

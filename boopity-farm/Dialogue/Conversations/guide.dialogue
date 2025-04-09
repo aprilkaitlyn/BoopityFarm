@@ -1,0 +1,16 @@
+~ start
+
+#the format of the greeting will pick 1 of the 3 each interaction
+Marlow: [[Hi|Hello|Howdy]], nice to meet you.
+Marlow: Welcome to Boopity Farm!
+Marlow: As you can see, the cows and chickens are hungry.
+Marlow: You must grow some crops to feed them.
+Marlow: Here are some seeds to get you started.
+- Take crop seeds
+	Teemo: I've got a green thumb!
+	#calling our game dialogue manager script from the dialogue
+	do GameDialogueManager.action_give_crop_seeds()
+- No thanks
+	Teemo: I'm not ready to start my farm yet...
+
+=> END
