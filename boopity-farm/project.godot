@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Boopity Farm"
-run/main_scene="uid://be5ct5d6tvlb3"
+run/main_scene="uid://cupj4b8gad300"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
