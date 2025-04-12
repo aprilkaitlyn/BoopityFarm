@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=4 uid="uid://cdynhujfvettv"]
+[gd_scene load_steps=18 format=4 uid="uid://cdynhujfvettv"]
 
+[ext_resource type="PackedScene" uid="uid://j14ujyrov6cl" path="res://Scenes/Components/save_level_data_component.tscn" id="1_tjl6l"]
 [ext_resource type="TileSet" uid="uid://b6gs2btx2me5u" path="res://Tilesets/game_tile_set.tres" id="1_tlcug"]
 [ext_resource type="PackedScene" uid="uid://0h1imecmfuo3" path="res://Scenes/Houses/large_house.tscn" id="2_4dpyx"]
 [ext_resource type="PackedScene" uid="uid://ckp72h5ae1o3g" path="res://Scenes/Characters/Chickens/chicken.tscn" id="3_3mqfk"]
+[ext_resource type="PackedScene" uid="uid://w3mali1873oy" path="res://Scenes/Components/save_data_component.tscn" id="3_3628d"]
 [ext_resource type="PackedScene" uid="uid://buxodyd6nwru1" path="res://Scenes/Characters/Guide/guide.tscn" id="3_cyadu"]
 [ext_resource type="PackedScene" uid="uid://bv360ci7467md" path="res://Scenes/Characters/Cow/cow.tscn" id="4_iixi8"]
+[ext_resource type="Resource" uid="uid://c6kcnun8epyau" path="res://Resources/tilemap_layer_data_resource.tres" id="4_irw6p"]
 [ext_resource type="PackedScene" uid="uid://cagtwxflu8qjm" path="res://Scenes/Components/field_cursor_component.tscn" id="4_rb0md"]
 [ext_resource type="Script" uid="uid://b4ocd1m42t7xv" path="res://Scenes/Components/field_cursor_component.gd" id="5_u5ghp"]
 [ext_resource type="PackedScene" uid="uid://b2ceihe2ed17m" path="res://Scenes/Components/crops_cursor_component.tscn" id="6_hwvp3"]
@@ -27,7 +30,8 @@ source_geometry_mode = 2
 
 [node name="Level1" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(483, 277)
+
+[node name="SaveLevelDataComponent" parent="." instance=ExtResource("1_tjl6l")]
 
 [node name="GameTileMap" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -42,6 +46,9 @@ tile_set = ExtResource("1_tlcug")
 
 [node name="TilledSoil" type="TileMapLayer" parent="GameTileMap"]
 tile_set = ExtResource("1_tlcug")
+
+[node name="SaveDataComponent" parent="GameTileMap/TilledSoil" instance=ExtResource("3_3628d")]
+save_data_resource = ExtResource("4_irw6p")
 
 [node name="Undergrowth" type="TileMapLayer" parent="GameTileMap"]
 tile_map_data = PackedByteArray("AAAcABEAAwAGAAEAAAArAA0AAwAGAAEAAAAkAAoAAwAGAAEAAAAbAAoAAwAGAAEAAAAxAAgAAwAGAAEAAAAiAAcAAwAGAAEAAAAYAAcAAwAGAAEAAAAIAAkAAwAGAAEAAAANAA4AAwAGAAEAAAAMABoAAwAGAAEAAAAPAB0AAwAGAAEAAAAXAB4AAwAGAAEAAAAfABwAAwAGAAEAAAAWAA0AAwAGAAEAAAApABEAAwAGAAEAAAAzABEAAwAGAAEAAAA2AAoAAwAGAAEAAAA1ABkAAwAGAAEAAAAtABsAAwAGAAEAAAA2AB0AAwAFAAEAAAAmABcAAwAFAAEAAAAjAA4AAwAFAAEAAAApAAsAAwAFAAEAAAAdAA0AAwAFAAEAAAAgABEAAwAFAAEAAAAeAAcAAwAFAAEAAAAYABUAAwAFAAEAAAAJABYAAwAFAAEAAAAaAB4AAwAFAAEAAAAOAAUAAwAFAAEAAAAlABkAAwAGAAMAAAAyABsAAwAGAAMAAAA1ABYAAwAGAAMAAAAvAA0AAwAGAAMAAAAsAAoAAwAGAAMAAAAYAAoAAwAGAAMAAAATAA8AAwAGAAMAAAAKABkAAwAGAAMAAAAbABUAAwAFAAQAAAAGABAAAwAFAAQAAAAYAAIAAwAFAAQAAAA8AAgAAwAFAAQAAAA5ABUAAwAFAAQAAAA7ACAAAwAFAAQAAAAoAB0AAwAFAAQAAAAdACEAAwAFAAQAAAAJAB8AAwAFAAQAAAAzAAEAAwAFAAQAAAAEAAsAAwAGAAQAAAAFABwAAwAGAAQAAAAfABQAAwAGAAQAAAAgABcAAwAGAAQAAAA8AAIAAwAGAAQAAAAnAAMAAwAGAAQAAAANAAMAAwAGAAQAAAAXABsAAwAGAAIAAAARABoAAwAGAAIAAAAMABUAAwAGAAIAAAAjABwAAwAGAAIAAAApABYAAwAGAAIAAAAuAAkAAwAGAAIAAAAaAA8AAwAGAAIAAAAmABMAAwAGAAIAAAAqAAcAAwAGAAIAAAAbAAYAAwAGAAIAAAAKAAcAAwAGAAIAAAASAA4AAwAGAAIAAAANAB4AAwAGAAIAAAAcABoAAwAGAAIAAAA=")

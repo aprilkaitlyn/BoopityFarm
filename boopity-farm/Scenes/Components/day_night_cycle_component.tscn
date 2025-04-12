@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bcp5hypj66320" path="res://Scenes/Components/day_night_cycle_component.gd" id="1_mapu4"]
 
 [sub_resource type="Gradient" id="Gradient_mapu4"]
-offsets = PackedFloat32Array(0, 0.0615836, 0.1261, 0.208211, 0.284457, 0.351906, 1)
-colors = PackedColorArray(0.370886, 0.00107332, 0.927886, 1, 0.556804, 0.18859, 1, 1, 0.996848, 0.387523, 0.913912, 1, 0.999998, 0.450918, 0.52832, 1, 1, 0.704218, 0.57279, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0, 0, 0, 0.173529, 0.402941, 0.473529, 0.55, 0.611765, 0.694118, 0.788235, 0.920588)
+colors = PackedColorArray(0.556804, 0.18859, 1, 1, 0.996848, 0.387523, 0.913912, 1, 0.999998, 0.450918, 0.52832, 1, 1, 0.704218, 0.57279, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_5u4mq"]
 gradient = SubResource("Gradient_mapu4")
